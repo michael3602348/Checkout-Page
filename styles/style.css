@@ -1,335 +1,185 @@
-<!DOCTYPE html>
-<html lang="es">
+:root {
+    --bg: #0f1220;
+    --card: #161a33;
+    --text: #eaeaf0;
+    --muted: #b4b7d9;
+    --accent: #4f7cff;
+    --accent-hover: #3a63e0;
+    --danger: #ff6b6b;
+    --radius: 16px;
+}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ruta Digital RD – Empieza hoy con algo simple</title>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <meta name="description"
-        content="Guía práctica en PDF para aprender qué ofrecer y cómo vender servicios digitales simples a negocios pequeños. Sin experiencia. Sin promesas.">
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(180deg, #0f1220, #0b0e1a);
+    color: var(--text);
+    line-height: 1.6;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 24px 24px 24px;
+}
 
-    <style>
-        :root {
-            --bg: #0f1220;
-            --card: #161a33;
-            --text: #eaeaf0;
-            --muted: #b4b7d9;
-            --accent: #4f7cff;
-            --accent-hover: #3a63e0;
-            --danger: #ff6b6b;
-            --radius: 16px;
-        }
+section {
+    padding: 80px 0;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+.hero {
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+    padding: 50px 0 80px 0;
+}
 
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background: linear-gradient(180deg, #0f1220, #0b0e1a);
-            color: var(--text);
-            line-height: 1.6;
-        }
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+}
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 24px;
-        }
+.badge {
+    display: inline-block;
+    background: rgba(79, 124, 255, .15);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 10px;
+    width: 100%;
+    margin-bottom: 18px;
+}
 
-        section {
-            padding: 80px 0;
-        }
+h1 {
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
 
-        /* ---------- HERO (Z) ---------- */
-        .hero {
-            min-height: 90vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 56px;
-            align-items: center;
-        }
+.subtitle {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 560px;
+    margin-bottom: 20px;
+}
 
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: 1fr;
-            }
-        }
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 17px;
+    box-shadow: 0 12px 30px rgba(79, 124, 255, .35);
+    transition: all .15s ease;
+}
 
-        .badge {
-            display: inline-block;
-            background: rgba(79, 124, 255, .15);
-            color: var(--accent);
-            padding: 6px 14px;
-            border-radius: 999px;
-            font-size: 13px;
-            margin-bottom: 18px;
-        }
+.cta:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
 
-        h1 {
-            font-size: clamp(34px, 4vw, 48px);
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+}
 
-        .subtitle {
-            font-size: 18px;
-            color: var(--muted);
-            max-width: 560px;
-            margin-bottom: 36px;
-        }
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
-        .cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--accent);
-            color: #fff;
-            text-decoration: none;
-            padding: 16px 32px;
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: 17px;
-            box-shadow: 0 12px 30px rgba(79, 124, 255, .35);
-            transition: all .15s ease;
-        }
+.price {
+    font-size: 40px;
+    font-weight: 700;
+}
 
-        .cta:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
+.price span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--muted);
+}
 
-        .card {
-            background: var(--card);
-            border-radius: var(--radius);
-            padding: 32px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
-        }
+.section-title {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
 
-        .hero-card {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
+.section-sub {
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 24px;
+    max-width: 700px;
+}
 
-        .price {
-            font-size: 40px;
-            font-weight: 700;
-        }
+ul {
+    list-style: none;
+    max-width: 700px;
+}
 
-        .price span {
-            font-size: 16px;
-            font-weight: 400;
-            color: var(--muted);
-        }
+li {
+    margin-bottom: 12px;
+    padding-left: 22px;
+    position: relative;
+}
 
-        /* ---------- F SECTIONS ---------- */
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
+li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
 
-        .section-sub {
-            color: var(--muted);
-            font-size: 18px;
-            margin-bottom: 36px;
-            max-width: 700px;
-        }
+.no li::before {
+    content: "✖";
+    color: var(--danger);
+}
 
-        ul {
-            list-style: none;
-            max-width: 700px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
 
-        li {
-            margin-bottom: 12px;
-            padding-left: 22px;
-            position: relative;
-        }
+.final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 120px;
+}
 
-        li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: 700;
-        }
+footer {
+    text-align: center;
+    padding: 32px 16px;
+    color: var(--muted);
+    font-size: 14px;
+}
 
-        .no li::before {
-            content: "✖";
-            color: var(--danger);
-        }
+.fade {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 32px;
-        }
-
-        /* ----------  ---------- */
-        .final {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding-bottom: 120px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 32px 16px;
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* ---------- ANIM ---------- */
-        .fade {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity .6s ease, transform .6s ease;
-        }
-
-        .fade.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-
-        <!-- HERO -->
-        <section class="hero fade">
-            <div>
-                <span class="badge">Guía práctica · Principiantes</span>
-                <h1>Deja de pensar tanto y empieza hoy con algo simple</h1>
-                <p class="subtitle">
-                    Aprende qué ofrecer y cómo vender servicios digitales básicos a negocios pequeños,
-                    aunque no tengas experiencia ni sepas por dónde empezar.
-                </p>
-                <a href="#comprar" class="cta">Quiero empezar hoy</a>
-            </div>
-
-            <div class="card hero-card">
-                <h3>Ruta Digital RD</h3>
-                <p>Guía práctica en PDF</p>
-                <div class="price">US$4.99 <span>pago único</span></div>
-                <ul>
-                    <li>Método simple</li>
-                    <li>Ejemplo práctico</li>
-                    <li>Acción sin perfección</li>
-                    <li>Lectura corta</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- DOLOR -->
-        <section class="fade">
-            <h2 class="section-title">No es falta de ganas</h2>
-            <p class="section-sub">Es falta de claridad.</p>
-            <ul>
-                <li>No sabes qué ofrecer</li>
-                <li>Te da miedo escribir a negocios</li>
-                <li>Consumes información pero no ejecutas</li>
-                <li>Sientes que aún no estás listo</li>
-            </ul>
-        </section>
-
-        <!-- IDENTIFICACIÓN -->
-        <section class="fade">
-            <h2 class="section-title">Este PDF es para ti si</h2>
-            <ul>
-                <li>Nunca has vendido nada online</li>
-                <li>Tienes WhatsApp y una PC o celular</li>
-                <li>Quieres algo simple, no teoría larga</li>
-                <li>Estás en RD o un contexto similar</li>
-            </ul>
-        </section>
-
-        <!-- QUE ES / NO ES -->
-        <section class="fade">
-            <div class="grid">
-                <div class="card">
-                    <h3>Qué SÍ es</h3>
-                    <ul>
-                        <li>Un PDF educativo</li>
-                        <li>Un método simple</li>
-                        <li>Hecho para empezar</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Qué NO es</h3>
-                    <ul class="no">
-                        <li>No es un curso</li>
-                        <li>No es mentoría</li>
-                        <li>No promete ingresos</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- VALOR -->
-        <section class="fade">
-            <h2 class="section-title">El verdadero valor</h2>
-            <p class="section-sub">
-                Pasar de <strong>“no sé por dónde empezar”</strong> a
-                <strong>“ya sé qué hacer hoy”</strong>.
-            </p>
-        </section>
-
-        <!-- FAQ -->
-        <section class="fade">
-            <h2 class="section-title">Preguntas comunes</h2>
-            <ul>
-                <li><strong>¿Necesito experiencia?</strong> No. Está hecho para empezar desde cero.</li>
-                <li><strong>¿Esto promete ingresos?</strong> No. Promete claridad y acción.</li>
-                <li><strong>¿Funciona si no hago nada?</strong> No. Depende de ejecutar.</li>
-            </ul>
-        </section>
-
-        <!-- CTA FINAL -->
-        <!-- <section id="comprar" class="final fade">
-            <h2 class="section-title">Empieza hoy, sin presión</h2>
-            <p class="section-sub">Si no te aporta claridad, solo perdiste un café.</p>
-            <a href="#" class="cta">Acceder por US$4.99</a>
-        </section> -->
-
-        <section id="comprar" class="final fade">
-            <h2 class="section-title">Empieza hoy, sin presión</h2>
-            <p class="section-sub">Si no te aporta claridad, solo perdiste un café.</p>
-
-            <p style="color: var(--muted); font-size: 15px; margin-bottom: 24px;">
-                Incluye un ejemplo real de servicio y cómo ofrecerlo paso a paso.
-            </p>
-
-            <a href="#" class="cta">Acceder por US$4.99</a>
-        </section>
-
-    </div>
-
-    <footer>
-        © 2026 Ruta Digital RD · Producto educativo · Sin promesas de ingresos
-    </footer>
-
-    <script>
-        const elements = document.querySelectorAll('.fade');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('show');
-            });
-        }, { threshold: 0.15 });
-
-        elements.forEach(el => observer.observe(el));
-    </script>
-</body>
-
-</html>
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
