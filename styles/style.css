@@ -15,6 +15,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', system-ui, sans-serif;
     background: linear-gradient(180deg, #0f1220, #0b0e1a);
@@ -53,8 +57,7 @@ section {
     color: var(--accent);
     padding: 6px 14px;
     border-radius: 999px;
-    font-size: 10px;
-    width: 100%;
+    font-size: 13px;
     margin-bottom: 18px;
 }
 
@@ -105,6 +108,10 @@ h1 {
 }
 
 .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
     font-size: 40px;
     font-weight: 700;
 }
@@ -113,6 +120,7 @@ h1 {
     font-size: 16px;
     font-weight: 400;
     color: var(--muted);
+    padding: 0 0 15px 0;
 }
 
 .section-title {
@@ -183,3 +191,13 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+< !DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description"
+content="Guía práctica en PDF para aprender qué ofrecer y cómo vender servicios digitales simples a negocios pequeños. Sin experiencia. Sin promesas."><title>Ruta Digital RD – Empieza hoy con algo simple</title><link rel="stylesheet" href="styles/style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></head><body><div class="container">< !-- HERO --><section class="hero fade"><div class="div-hero-main"><span class="badge">Guía práctica · Servicios digitales · Principiantes</span><h1 style="font-size: 40px;">Deja de pensar tanto y empieza a generar ingresos digitales con algo simple </h1><p class="subtitle">Aprende qué servicio digital básico ofrecer y cómo venderlo a negocios pequeños,
+aunque no sepas vender ni tengas experiencia. </p><p style="color: var(--muted); font-size: 15px; margin-bottom: 28px;">Léelo una vez y empieza hoy mismo a aplicar lo aprendido. </p><a href="#comprar" class="cta">Quiero empezar hoy</a></div><div class="card hero-card"><h3>Ruta Digital RD</h3><p class="p-card">Guía práctica en PDF</p><div class="price">US$4.99 <span>pago único</span></div><ul><li>Método simple</li><li>Ejemplo práctico</li><li>Lectura corta</li><li>Qué ofrecer y cómo empezar</li></ul></div></section>< !-- DOLOR --><section class="fade"><h2 class="section-title">No es falta de ganas</h2><ul><li>No sabes qué ofrecer</li><li>Te da miedo escribir a negocios</li><li>Consumes información pero no ejecutas</li><li>Sientes que aún no estás listo</li></ul><p class="section-sub">No te falta capacidad. Te falta una estructura simple para empezar. </p></section>< !-- IDENTIFICACIÓN --><section class="fade"><h2 class="section-title">Este PDF es para ti si</h2><ul><li>Nunca has vendido nada online</li><li>Tienes WhatsApp y un celular o una PC</li><li>Quieres algo simple,
+no teoría larga</li><li>Estás en RD o un contexto similar</li></ul><p class="section-sub">La mayoría de las personas empieza exactamente así,
+sin experiencia. </p></section>< !-- QUE ES / NO ES --><section class="fade"><div class="grid"><div class="card"><h3>Qué SÍ es</h3><ul><li>Un PDF educativo</li><li>Un método simple</li><li>Hecho para empezar</li></ul></div><div class="card"><h3>Qué NO es</h3><ul class="no"><li>No es un curso</li><li>No es una mentoría</li><li>No promete ingresos</li></ul></div></div></section>< !-- VALOR --><section class="fade"><h2 class="section-title">El verdadero valor</h2><p class="section-sub">Pasar de <strong>“no sé por dónde empezar”</strong>a <strong>“ya sé qué hacer hoy”</strong>. </p><p style="color: var(--muted); font-size: 15px;">Está escrito desde la experiencia de empezar sin saber nada. </p></section>< !-- FAQ --><section class="fade"><h2 class="section-title">Preguntas comunes</h2><ul><li><strong>¿Necesito experiencia?</strong>No. Está hecho para empezar desde cero.</li><li><strong>¿Esto promete ingresos?</strong>No. Promete claridad y acción.</li><li><strong>¿Funciona si no hago nada?</strong>No. Depende de ejecutar.</li></ul></section>< !-- CTA FINAL --><section id="comprar" class="final fade"><h2 class="section-title">Empieza hoy,
+sin presión</h2><p class="section-sub">Si no te aporta claridad,
+solo perdiste un café.</p><p style="color: var(--muted); font-size: 15px; margin-bottom: 20px;">Incluye un ejemplo real de servicio y cómo ofrecerlo paso a paso. </p><p style="color: var(--muted); font-size: 15px; margin-bottom: 28px;">Si no te da claridad,
+simplemente no era para ti. Y ya. </p><a href="#" class="cta">Acceder por US$4.99</a><p style="color: var(--muted); font-size: 14px; margin-top: 16px;">Precio único: US$4.99 · Sin pagos recurrentes </p></section></div>< !-- Footer de la landing page --><footer>© 2026 Ruta Digital RD · Producto educativo · Sin promesas de ingresos </footer>< !-- Archivo de javascript --><script src="scripts/script.js"></script></body></html>

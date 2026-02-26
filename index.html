@@ -4,142 +4,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Guía práctica en PDF para aprender qué ofrecer y cómo vender servicios digitales simples a negocios pequeños. Sin experiencia. Sin promesas.">
-    <title>Ruta Digital RD – Empieza hoy con algo simple</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Ruta Digital RD</title>
+    <style>
+        /* --- RESET BÁSICO --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 650px;
+            /* mobile-first height */
+            background: #fff;
+        }
+
+        .div-hero-main {
+            max-width: 95%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e0f3ff;
+            color: #0077cc;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            /* mobile-first */
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .hero p.muted {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cta {
+            display: inline-block;
+            background: #0077cc;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta:hover {
+            background: #005fa3;
+        }
+
+        /* --- CARD --- */
+        .hero-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            max-width: 320px;
+            width: 90%;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .hero-card h3 {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .hero-card .p-card {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .price span {
+            font-size: 14px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .hero-card ul {
+            list-style-type: disc;
+            padding-left: 18px;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .hero-card ul li {
+            margin-bottom: 6px;
+        }
+
+        /* --- RESPONSIVE DESKTOP --- */
+        @media(min-width: 768px) {
+            .hero {
+                flex-direction: row;
+                justify-content: space-around;
+                min-height: 80vh;
+                padding: 40px;
+                text-align: left;
+            }
+
+            .div-hero-main {
+                max-width: 50%;
+                margin-bottom: 0;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-card {
+                max-width: 300px;
+                margin-top: 0;
+            }
+        }
+
+        /* --- ANIMACIONES --- */
+        .fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <!-- HERO -->
-        <section class="hero fade">
-            <div class="div-hero-main">
-                <span class="badge">Guía práctica · Servicios digitales · Principiantes</span>
-                <h1 style="font-size: 40px;">Deja de pensar tanto y empieza a generar ingresos digitales con algo simple
-                </h1>
 
-                <p class="subtitle">
-                    Aprende qué servicio digital básico ofrecer y cómo venderlo a negocios pequeños, aunque no sepas
-                    vender ni tengas experiencia.
-                </p>
+    <!-- HERO -->
+    <section class="hero fade">
+        <div class="div-hero-main">
+            <span class="badge">Guía práctica · Servicios digitales · Principiantes</span>
+            <h1>Deja de pensar tanto y empieza a generar ingresos digitales con algo simple</h1>
 
-                <p style="color: var(--muted); font-size: 15px; margin-bottom: 28px;">
-                    Léelo una vez y empieza hoy mismo a aplicar lo aprendido.
-                </p>
+            <p class="subtitle">
+                Aprende qué servicio digital básico ofrecer y cómo venderlo a negocios pequeños, aunque no sepas vender
+                ni tengas experiencia.
+            </p>
 
-                <a href="#comprar" class="cta">Quiero empezar hoy</a>
-            </div>
+            <p class="muted">
+                Léelo una vez y empieza hoy mismo a aplicar lo aprendido.
+            </p>
 
-            <div class="card hero-card">
-                <h3>Ruta Digital RD</h3>
-                <p class="p-card">Guía práctica en PDF</p>
-                <div class="price">US$4.99 <span>pago único</span></div>
-                <ul>
-                    <li>Método simple</li>
-                    <li>Ejemplo práctico</li>
-                    <li>Lectura corta</li>
-                    <li>Qué ofrecer y cómo empezar</li>
-                </ul>
-            </div>
-        </section>
-        <!-- DOLOR -->
-        <section class="fade">
-            <h2 class="section-title">No es falta de ganas</h2>
+            <a href="#comprar" class="cta">Quiero empezar hoy</a>
+        </div>
 
+        <div class="card hero-card">
+            <h3>Ruta Digital RD</h3>
+            <p class="p-card">Guía práctica en PDF</p>
+            <div class="price">US$4.99 <span>pago único</span></div>
             <ul>
-                <li>No sabes qué ofrecer</li>
-                <li>Te da miedo escribir a negocios</li>
-                <li>Consumes información pero no ejecutas</li>
-                <li>Sientes que aún no estás listo</li>
+                <li>Método simple</li>
+                <li>Ejemplo práctico</li>
+                <li>Lectura corta</li>
+                <li>Qué ofrecer y cómo empezar</li>
             </ul>
-            <p class="section-sub">
-                No te falta capacidad. Te falta una estructura simple para empezar.
-            </p>
-        </section>
-        <!-- IDENTIFICACIÓN -->
-        <section class="fade">
-            <h2 class="section-title">Este PDF es para ti si</h2>
-            <ul>
-                <li>Nunca has vendido nada online</li>
-                <li>Tienes WhatsApp y un celular o una PC</li>
-                <li>Quieres algo simple, no teoría larga</li>
-                <li>Estás en RD o un contexto similar</li>
-            </ul>
-            <p class="section-sub">
-                La mayoría de las personas empieza exactamente así, sin experiencia.
-            </p>
-        </section>
-        <!-- QUE ES / NO ES -->
-        <section class="fade">
-            <div class="grid">
-                <div class="card">
-                    <h3>Qué SÍ es</h3>
-                    <ul>
-                        <li>Un PDF educativo</li>
-                        <li>Un método simple</li>
-                        <li>Hecho para empezar</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Qué NO es</h3>
-                    <ul class="no">
-                        <li>No es un curso</li>
-                        <li>No es una mentoría</li>
-                        <li>No promete ingresos</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!-- VALOR -->
-        <section class="fade">
-            <h2 class="section-title">El verdadero valor</h2>
-            <p class="section-sub">
-                Pasar de <strong>“no sé por dónde empezar”</strong> a
-                <strong>“ya sé qué hacer hoy”</strong>.
-            </p>
-            <p style="color: var(--muted); font-size: 15px;">
-                Está escrito desde la experiencia de empezar sin saber nada.
-            </p>
-        </section>
-        <!-- FAQ -->
-        <section class="fade">
-            <h2 class="section-title">Preguntas comunes</h2>
-            <ul>
-                <li><strong>¿Necesito experiencia?</strong> No. Está hecho para empezar desde cero.</li>
-                <li><strong>¿Esto promete ingresos?</strong> No. Promete claridad y acción.</li>
-                <li><strong>¿Funciona si no hago nada?</strong> No. Depende de ejecutar.</li>
-            </ul>
-        </section>
-        <!-- CTA FINAL -->
-        <section id="comprar" class="final fade">
-            <h2 class="section-title">Empieza hoy, sin presión</h2>
-            <p class="section-sub">Si no te aporta claridad, solo perdiste un café.</p>
+        </div>
+    </section>
 
-            <p style="color: var(--muted); font-size: 15px; margin-bottom: 20px;">
-                Incluye un ejemplo real de servicio y cómo ofrecerlo paso a paso.
-            </p>
+    <!-- EJEMPLO DE SECCIÓN DE COMPRA -->
+    <section id="comprar" style="padding: 40px 20px; background:#f0f8ff; text-align:center;">
+        <h2 style="font-size:24px; margin-bottom:20px;">Adquiere tu guía hoy</h2>
+        <p style="font-size:16px; margin-bottom:20px;">US$4.99 - pago único</p>
+        <a href="#" class="cta">Comprar ahora</a>
+    </section>
 
-            <p style="color: var(--muted); font-size: 15px; margin-bottom: 28px;">
-                Si no te da claridad, simplemente no era para ti. Y ya.
-            </p>
+    <script>
+        // Animación fade al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            const hero = document.querySelector('.hero');
+            setTimeout(() => {
+                hero.classList.add('show');
+            }, 100);
+        });
+    </script>
 
-            <a href="#" class="cta">Acceder por US$4.99</a>
-
-            <p style="color: var(--muted); font-size: 14px; margin-top: 16px;">
-                Precio único: US$4.99 · Sin pagos recurrentes
-            </p>
-        </section>
-    </div>
-    <!-- Footer de la landing page -->
-    <footer>
-        © 2026 Ruta Digital RD · Producto educativo · Sin promesas de ingresos
-    </footer>
-    <!-- Archivo de javascript -->
-    <script src="scripts/script.js"></script>
 </body>
 
 </html>
