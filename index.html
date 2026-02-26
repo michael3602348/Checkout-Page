@@ -81,6 +81,11 @@ body {
 
 /* --- HERO CARD MEJORADO --- */
 .hero-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
   background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.6);
@@ -197,7 +202,7 @@ body {
   <div class="card hero-card">
     <h3>Ruta Digital RD</h3>
     <p class="p-card">Guía práctica en PDF</p>
-    <div class="price">US$4.99 <span>pago único</span></div>
+    <div class="price">US$4.99 <span style="font-size: 13px; color: #ccc;">pago único</span></div>
     <div class="offer">Oferta por tiempo limitado</div>
     <ul>
       <li>Método simple</li>
