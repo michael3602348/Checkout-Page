@@ -122,6 +122,14 @@
             margin-bottom: 12px;
         }
 
+        /* Temporizador */
+        .timer {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ff4444;
+            margin-bottom: 12px;
+        }
+
         .hero-card ul {
             list-style: none;
             padding-left: 0;
@@ -177,13 +185,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-
-        .a-cta-card {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
     </style>
 </head>
 
@@ -213,16 +214,17 @@
 
             <!-- Precio con oferta clara -->
             <div class="price">
-                <span style="text-decoration: line-through; color: #aaa; font-size: 14px;">US$9.99</span>
+                <span style="text-decoration: line-through; color: #aaa; font-size: 16px;">US$9.99</span>
                 &nbsp;
                 <span style="color: #00ffaa; font-size: 26px; font-weight: bold;">US$4.99</span>
                 <span style="font-size: 13px; color: #ccc;">pago único</span>
             </div>
 
             <!-- Oferta / urgencia -->
-            <div class="offer" style="color:#ffaa00; font-weight:bold; margin-bottom:14px;">
-                ¡Oferta válida solo hoy!
-            </div>
+            <div class="offer">¡Oferta válida solo hoy!</div>
+
+            <!-- Temporizador -->
+            <div class="timer" id="timer">Cargando temporizador...</div>
 
             <!-- Beneficios con check -->
             <ul>
@@ -262,6 +264,32 @@
             setTimeout(() => {
                 hero.classList.add('show');
             }, 100);
+
+            // --- TEMPORIZADOR ---
+            const timerEl = document.getElementById('timer');
+            // Calcula 24 horas desde ahora
+            const endTime = new Date();
+            endTime.setHours(endTime.getHours() + 24);
+
+            function updateTimer() {
+                const now = new Date();
+                const diff = endTime - now;
+
+                if (diff <= 0) {
+                    timerEl.textContent = "¡Oferta finalizada!";
+                    clearInterval(timerInterval);
+                    return;
+                }
+
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                timerEl.textContent = `Quedan ${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            updateTimer();
+            const timerInterval = setInterval(updateTimer, 1000);
         });
     </script>
 
