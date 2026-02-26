@@ -16,9 +16,7 @@
 
         body {
             background: linear-gradient(180deg, #0f1220, #0b0e1a);
-            /* GRADIENTE OSCURO */
             color: #fff;
-            /* texto principal en blanco para contraste */
             line-height: 1.5;
         }
 
@@ -28,15 +26,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 40px 20px;
             min-height: 650px;
-            /* mobile-first height */
         }
 
         .div-hero-main {
             max-width: 95%;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         .badge {
@@ -51,9 +48,8 @@
 
         .hero h1 {
             font-size: 28px;
-            /* mobile-first */
             margin-bottom: 12px;
-            line-height: 1.2;
+            line-height: 1.3;
         }
 
         .subtitle {
@@ -64,7 +60,7 @@
         .hero p.muted {
             color: #ccc;
             font-size: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .cta {
@@ -72,7 +68,7 @@
             background: #00aaff;
             color: #0b0e1a;
             text-decoration: none;
-            padding: 12px 20px;
+            padding: 14px 24px;
             border-radius: 8px;
             font-size: 16px;
             font-weight: bold;
@@ -86,26 +82,25 @@
         /* --- CARD --- */
         .hero-card {
             background: rgba(255, 255, 255, 0.05);
-            /* semi-transparente sobre fondo oscuro */
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            padding: 16px;
-            max-width: 320px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            padding: 24px;
+            max-width: 340px;
             width: 90%;
-            margin-top: 20px;
+            margin-top: 40px;
             text-align: left;
             color: #fff;
         }
 
         .hero-card h3 {
-            font-size: 20px;
-            margin-bottom: 6px;
+            font-size: 22px;
+            margin-bottom: 8px;
         }
 
         .hero-card .p-card {
             font-size: 14px;
             color: #ccc;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .price {
@@ -122,13 +117,52 @@
 
         .hero-card ul {
             list-style-type: disc;
-            padding-left: 18px;
+            padding-left: 20px;
             font-size: 14px;
-            margin-top: 8px;
+            margin-top: 12px;
         }
 
         .hero-card ul li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+        }
+
+        /* --- SECCIÓN COMPRAR --- */
+        #comprar {
+            padding: 60px 20px;
+            background: #0b0e1a;
+            text-align: center;
+        }
+
+        #comprar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        #comprar p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #ccc;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            background: #0b0e1a;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         /* --- RESPONSIVE DESKTOP --- */
@@ -137,7 +171,7 @@
                 flex-direction: row;
                 justify-content: space-around;
                 min-height: 80vh;
-                padding: 40px;
+                padding: 60px 40px;
                 text-align: left;
             }
 
@@ -151,7 +185,7 @@
             }
 
             .hero-card {
-                max-width: 300px;
+                max-width: 320px;
                 margin-top: 0;
             }
         }
@@ -187,7 +221,7 @@
                 Léelo una vez y empieza hoy mismo a aplicar lo aprendido.
             </p>
 
-            <a href="#comprar" class="cta">Quiero empezar hoy</a>
+            <a href="#comprar" class="cta">Sí, quiero empezar ya!</a>
         </div>
 
         <div class="card hero-card">
@@ -204,11 +238,19 @@
     </section>
 
     <!-- SECCIÓN DE COMPRA -->
-    <section id="comprar" style="padding: 40px 20px; background:#0b0e1a; text-align:center;">
-        <h2 style="font-size:24px; margin-bottom:20px; color:#fff;">Adquiere tu guía hoy</h2>
-        <p style="font-size:16px; margin-bottom:20px; color:#ccc;">US$4.99 - pago único</p>
-        <a href="#" class="cta">Comprar ahora</a>
+    <section id="comprar">
+        <h2>Adquiere tu guía hoy</h2>
+        <p>US$4.99 - pago único <br>Pago seguro con Paypal</p>
+        <a href="#" class="cta">Obtener mi guía ahora</a>
     </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Ruta Digital RD.
+        <a href="#">Términos de servicio</a> |
+        <a href="#">Política de privacidad</a> |
+        <a href="#">Contacto</a>
+    </footer>
 
     <script>
         // Animación fade al cargar
